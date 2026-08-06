@@ -28,6 +28,14 @@ CATS = [
     {"key": "life", "name": "生活環保", "desc": "Mobile01 / Ptt / 環保署 / Cheers — 在地生活", "icon": "🌿", "color": "#15803D",
      "kw": ["mobile01", "ptt", "lifeismoney", "taichung", "環保", "poll-tex", "痞客邦"]},
 ]
+SVG_ICONS = {
+    "news": '<svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h5v-6h4v6h5v-8h3L12 3z" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/></svg>',
+    "gov": '<svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linejoin="round"/></svg>',
+    "prod": '<svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM8 14H6v-2h2v2zm0-3H6V9h2v2zm0-3H6V6h2v2zm8 6h-6v-2h6v2zm0-3h-6V9h6v2zm0-3h-6V6h6v2z" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>',
+    "life": '<svg viewBox="0 0 24 24"><path d="M17 8c0-2.21-1.79-4-4-4S9 5.79 9 8c0 4 4 8 4 8s4-4 4-8zM12 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM3 22c0-3.31 2.69-6 6-6s6 2.69 6 6" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round"/></svg>',
+}
+for c in CATS:
+    c["svg"] = SVG_ICONS.get(c["key"], c["icon"])
 
 # 分組
 buckets = {c["key"]: [] for c in CATS}
@@ -76,7 +84,7 @@ for c in CATS:
     cnt = sum(len(s["items"]) for s in buckets[c["key"]])
     src_count = len(buckets[c["key"]])
     cat_html += f'<a class="cat-card" href="#{c["key"]}" style="--c:{c["color"]};">'
-    cat_html += f'<div class="cat-icon">{c["icon"]}</div>'
+    cat_html += f'<div class="cat-icon">{c["svg"]}</div>'
     cat_html += f'<div class="cat-name">{c["name"]}</div>'
     cat_html += f'<div class="cat-desc">{c["desc"]}</div>'
     cat_html += f'<div class="cat-count">{cnt}</div>'
