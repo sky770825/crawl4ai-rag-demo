@@ -41,7 +41,7 @@ CATS = [
      "kw": ["ettoday", "yahoo", "新聞", "房市", "住展", "591"]},
     {"key": "gov", "name": "政府公開", "desc": "央行 / 公平會 / 內政部 — 政策法規即時查詢", "icon": "🏛️", "color": "#1E3A8A",
      "svg": '<svg viewBox="0 0 24 24"><path d="M12 2L2 7v2h20V7l-10-5zm0 4.7l6 3v.3H6v-.3l6-3zM4 11v8H2v2h20v-2h-2v-8h-2v8h-4v-8h-2v8H8v-8H4z"/></svg>',
-     "kw": ["央行", "公平會", "內政部", "環保署"]},
+     "kw": ["央行", "公平會", "內政部", "環保署"]},  # 中央社 綜合國際新聞,語義不屬於任何 4 桶,留給老蔡決策是否擴 5 類
     {"key": "ai", "name": "生產力科技", "desc": "iThome / INSIDE / 數位時代 — AI 與職場新知", "icon": "💼", "color": "#0E7490",
      "svg": '<svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.1-.9-2-2-2h-4c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v11c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-6 0h-4V4h4v2z"/></svg>',
      "kw": ["ithome", "inside", "數位時代", "科技新報", "經理人", "cheers", "大紀元"]},
@@ -166,7 +166,7 @@ html = f'''<!DOCTYPE html>
 <section class="hero">
 <div class="wrap">
 <span class="hero-eyebrow"><span class="live-pill"><span class="live-dot"></span>LIVE</span> 每日自動更新 · 純臺灣源</span>
-<div class="scroll-cue">↓ scroll 探索 5 大分類</div>
+<div class="scroll-cue">↓ scroll 探索 4 大分類</div>
 <h1 class="hero-title">讓臺灣 web <em>變得</em> 可讀。<br>把房仲知識變成你的 RAG。</h1>
 <p class="hero-lede">{sum(sum(s["count"] for s in buckets[k]) for k in buckets)} 條真實標題 / {len(SOURCES)} 個臺灣源 / 4 大分類 — 客戶問房,即時有答案。</p>
 <div class="hero-meta">
