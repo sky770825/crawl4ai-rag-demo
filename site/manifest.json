@@ -1,0 +1,16 @@
+{
+  "name": "臺灣 RAG",
+  "short_name": "臺灣 RAG",
+  "description": "讓臺灣 web 變得可讀,把房仲知識變成你的 RAG",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0F172A",
+  "theme_color": "#8B2845",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇹🇼</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
