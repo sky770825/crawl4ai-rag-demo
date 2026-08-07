@@ -1,0 +1,16 @@
+{
+  "name": "臺灣 RAG",
+  "short_name": "臺灣RAG",
+  "description": "從臺灣 23 個公開資料源累積真實新聞",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0b",
+  "theme_color": "#0a0a0b",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230a0a0b'/><text x='50' y='70' font-size='70' text-anchor='middle' fill='%23ff5470'>R</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml"
+    }
+  ]
+}
