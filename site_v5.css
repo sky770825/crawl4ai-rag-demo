@@ -129,7 +129,8 @@ body { font-family: var(--sans); font-size: var(--fs-base); line-height: 1.6; co
   color: var(--ink); font-feature-settings: 'tnum';
 }
 .hero-meta small { font-size: var(--fs-xs); color: var(--ink-3); }
-@media (min-width: 640px) { .hero-meta { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 640px) { .hero-meta { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .hero-meta { grid-template-columns: repeat(5, 1fr); } }
 
 .scroll-cue {
   display: none;
@@ -173,7 +174,7 @@ body { font-family: var(--sans); font-size: var(--fs-base); line-height: 1.6; co
   gap: var(--space-3);
 }
 @media (min-width: 640px) { .cat-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (min-width: 1024px) { .cat-grid { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 1024px) { .cat-grid { grid-template-columns: repeat(5, 1fr); } }
 .cat-card {
   display: block; padding: var(--space-4);
   background: var(--card); border: 1px solid var(--line); border-radius: 14px;
